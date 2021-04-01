@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd" ?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Visual Studio Code</Name>
+  <ID>Visual-Studio-Code</ID>
+  <Version>7</Version>
+  <Processes>
+    <Process>
+      <Filename>Code.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+    <Asynchronous>true</Asynchronous>
+    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Code</Path>
+      <FileMask>Cookies</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Code</Path>
+      <FileMask>Cookies-journal</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Code</Path>
+      <FileMask>Preferences</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Code\User</Path>
+      <FileMask>settings.json</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Code\User\snippets</Path>
+      <FileMask>*</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>

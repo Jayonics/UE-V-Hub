@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd" ?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Microsoft Visual Studio 2019</Name>
+  <ID>Microsoft-Visual-Studio-2019</ID>
+  <Version>7</Version>
+  <Processes>
+    <Process>
+      <Filename>devenv.exe</Filename>
+      <ProductVersion>
+        <Major Minimum="16" Maximum="16" />
+        <Minor Minimum="9" Maximum="9" />
+      </ProductVersion>
+      <FileVersion>
+        <Major Minimum="16" Maximum="16" />
+        <Minor Minimum="9" Maximum="9" />
+      </FileVersion>
+    </Process>
+  </Processes>
+  <Settings>
+    <Asynchronous>true</Asynchronous>
+    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Microsoft\VisualStudio\16.0_b8501ca0\Extensions</Path>
+      <FileMask>*.vsixmanifest</FileMask>
+    </File>
+    <CustomAction>PreventOverlappingSyncronization</CustomAction>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path>microsoft\visualstudio\16.0_b8501ca0\settings</Path>
+      <FileMask>CurrentSettings.vssettings</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>

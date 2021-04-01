@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Spotify</Name>
+  <ID>Spotify</ID>
+  <Version>5</Version>
+  <Processes>
+    <Process>
+      <Filename>Spotify.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+    <Asynchronous>true</Asynchronous>
+    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <AlwaysApplySettings>false</AlwaysApplySettings>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true" DeleteIfNotFound="false">Spotify\Users</Path>
+      <FileMask>prefs</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>

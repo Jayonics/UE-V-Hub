@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Corsair-iCUE</Name>
+  <ID>Corsair-iCUE</ID>
+  <Version>2</Version>
+  <Processes>
+    <Process>
+      <Filename>iCUE.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Corsair\CUE\Corsair</Path>
+      <FileMask>CUE.cuecfg</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Corsair\CUE</Path>
+      <FileMask>config.cuecfg</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\profiles</Path>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\sensors</Path>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\cooling</Path>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\hwlightings</Path>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\widgets</Path>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\libraries</Path>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Corsair\CUE\touchscreens</Path>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>

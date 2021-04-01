@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd" ?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Steam</Name>
+  <ID>Steam</ID>
+  <Version>2</Version>
+  <Processes>
+    <Process>
+      <Filename>steam.exe</Filename>
+      <ProductVersion>
+        <Major Minimum="01" Maximum="01" />
+        <Minor Minimum="00" Maximum="00" />
+      </ProductVersion>
+      <FileVersion>
+        <Major Minimum="6" Maximum="6" />
+        <Minor Minimum="43" Maximum="43" />
+      </FileVersion>
+    </Process>
+  </Processes>
+  <Settings>
+    <Registry>
+      <Path></Path>
+    </Registry>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Steam\htmlcache</Path>
+      <FileMask>UserPrefs.json</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Steam\htmlcache</Path>
+      <FileMask>Visited Links</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Steam\htmlcache</Path>
+      <FileMask>Cookies</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Steam\htmlcache</Path>
+      <FileMask>Cookies-journal</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Steam\htmlcache</Path>
+      <FileMask>Network Persistent State</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>
