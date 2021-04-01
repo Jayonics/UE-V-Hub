@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
+<SettingsLocationTemplate xmlns='http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate'>
+    <!-- Theme settings -->
+    <Name>Custom Theme Settings</Name>
+    <ID>CustomThemeSettings</ID>
+    <LocalizedNames>
+        <Name Locale='en-us'>Custom Theme Settings</Name>
+        <Name Locale="en-gb">Custom Theme Settings</Name>
+    </LocalizedNames>
+    <Version>7</Version>
+    <Processes>
+        <ShellProcess/>
+    </Processes>
+    <Settings>
+        <Asynchronous>false</Asynchronous>
+        <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+        <AlwaysApplySettings>false</AlwaysApplySettings>
+        <Registry>
+            <Path Recursive="true">SOFTWARE\Microsoft\Windows\CurrentVersion\ThemeManager</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">SOFTWARE\Microsoft\Windows\CurrentVersion\Themes</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Appearance</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Colors</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Desktop</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Mouse</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Sound</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Cursors</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true">Control Panel\Personalization\Desktop Slideshow</Path>
+        </Registry>
+        <Registry>
+            <Path Recursive="true" DeleteIfNotFound="true">Software\Microsoft\Windows\DWM</Path>
+        </Registry>
+        <!-- System parameters -->
+        <SystemParameter>DeskWallpaper</SystemParameter>
+        <SystemParameter>DesktopColor</SystemParameter>
+        <!-- Files -->
+        <File>
+            <Root>
+                <EnvironmentVariable>APPDATA</EnvironmentVariable>
+            </Root>
+            <Path Recursive="true">Microsoft\Windows\Themes</Path>
+            <FileMask>*</FileMask>
+        </File>
+        <File>
+            <Root>
+                <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+            </Root>
+            <Path Recursive="true">Microsoft\Windows\Themes</Path>
+            <FileMask>*</FileMask>
+        </File>
+    </Settings>
+</SettingsLocationTemplate>

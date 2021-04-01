@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd" ?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>SteelSeries Engine 3</Name>
+  <ID>SteelSeries-3</ID>
+  <Version>5</Version>
+  <Processes>
+    <Process>
+      <Filename>SteelSeriesEngine3.exe</Filename>
+      <ProductVersion>
+        <Major Minimum="3" Maximum="3" />
+        <Minor Minimum="19" Maximum="19" />
+      </ProductVersion>
+      <FileVersion>
+        <Major Minimum="3" Maximum="3" />
+        <Minor Minimum="19" Maximum="19" />
+      </FileVersion>
+    </Process>
+  </Processes>
+  <Settings>
+    <Asynchronous>true</Asynchronous>
+    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <AlwaysApplySettings>false</AlwaysApplySettings>
+    <File>
+      <Root>
+        <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
+      </Root>
+      <Path>SteelSeries\SteelSeries Engine 3\db</Path>
+      <FileMask>database.db</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
+      </Root>
+      <Path>SteelSeries\SteelSeries Engine 3\db</Path>
+      <FileMask>database.db-shm</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
+      </Root>
+      <Path>SteelSeries\SteelSeries Engine 3\db</Path>
+      <FileMask>database.db-wal</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
+      </Root>
+      <Path>SteelSeries\SteelSeries Engine 3\db</Path>
+      <FileMask>dbconf.yml</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
+      </Root>
+      <Path>SteelSeries\AudioSync</Path>
+      <FileMask>config.json</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>
