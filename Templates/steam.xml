@@ -3,7 +3,7 @@
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
   <Name>Steam</Name>
   <ID>Steam</ID>
-  <Version>2</Version>
+  <Version>3</Version>
   <Processes>
     <Process>
       <Filename>steam.exe</Filename>
@@ -33,13 +33,6 @@
         <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
       </Root>
       <Path>Steam\htmlcache</Path>
-      <FileMask>Visited Links</FileMask>
-    </File>
-    <File>
-      <Root>
-        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
-      </Root>
-      <Path>Steam\htmlcache</Path>
       <FileMask>Cookies</FileMask>
     </File>
     <File>
@@ -48,13 +41,6 @@
       </Root>
       <Path>Steam\htmlcache</Path>
       <FileMask>Cookies-journal</FileMask>
-    </File>
-    <File>
-      <Root>
-        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
-      </Root>
-      <Path>Steam\htmlcache</Path>
-      <FileMask>Network Persistent State</FileMask>
     </File>
   </Settings>
 </SettingsLocationTemplate>
