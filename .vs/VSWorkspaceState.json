@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Scripts",
+    "\\Scripts\\Template"
   ],
+  "SelectedNode": "\\Scripts\\Template\\UpdateCustom.ps1",
   "PreviewInSolutionExplorer": false
 }
