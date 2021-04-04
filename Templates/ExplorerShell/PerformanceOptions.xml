@@ -2,7 +2,7 @@
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
     <Name>PerformanceOptions</Name>
     <ID>PerformanceOptions</ID>
-    <Version>2</Version>
+    <Version>3</Version>
     <Processes>
         <ShellProcess />
     </Processes>
@@ -16,6 +16,10 @@
                 <Path Recursive="true">SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects</Path>
                 <Name>(Default)</Name>
             </Exclude>
+        </Registry>
+        <Registry>
+            <Path>Control Panel\Desktop</Path>
+            <Name>UserPreferencesMask</Name>
         </Registry>
     </Settings>
 </SettingsLocationTemplate>
