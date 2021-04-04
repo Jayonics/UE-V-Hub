@@ -12,7 +12,7 @@ if(!$?){
     [Environment]::Stop()
 }
 
-$Templates = Get-ChildItem -Path "$($UevTemplatePath)" -Filter "*.xml"
+$Templates = Get-ChildItem -Path "$($UevTemplatePath)" -Filter "*.xml" -Recurse
 $CustomTemplateIDs = @()
 ForEach ($File in $Templates) {
     [xml]$FileContent = Get-Content -Path "$($File.FullName)"

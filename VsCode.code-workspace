@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "UE-V-Hub"
+		},
+		{
+			"path": "C:\\ProgramData\\Microsoft\\UEV",
+			"name": "ProgramData UE-V"
+		}
+	],
+	"settings": {
+		"xml.catalogs": [
+			"file:///A:\\Server\\Scripts\\UE-V-Hub\\Schemas-Catalogs\\Catalog2012.xml",
+			"file:///A:\\Server\\Scripts\\UE-V-Hub\\Schemas-Catalogs\\Catalog2013.xml",
+			"file:///A:\\Server\\Scripts\\UE-V-Hub\\Schemas-Catalogs\\Catalog2013A.xml"
+		],
+		"xml.fileAssociations": [
+			{
+				"pattern": "*.xml",
+				"systemId": ".\\Schemas-Catalogs\\SettingsLocationTemplate2013A.xsd"
+			}
+		],
+		"[xml]": {
+			"editor.autoClosingBrackets": "never",
+			"files.trimFinalNewlines": true,
+			"files.trimTrailingWhitespace": false,
+			"files.encoding": "utf8",
+			"files.eol":"\r\n",
+		},
+		"xml.validation.enabled": true,
+		"xml.validation.schema.enabled": "always",
+		"xml.format.enabled": true,
+		"xml.validation.noGrammar": "error",
+		"xml.validation.resolveExternalEntities": true,
+		"xml.codeLens.enabled": true,
+	}
+}

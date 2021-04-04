@@ -1,0 +1,5 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri
+        name="http://schemas.microsoft.com/UserExperienceVirtualization/2012/SettingsLocationTemplate"
+        uri=".\SettingsLocationTemplate.xsd"/>
+</catalog>

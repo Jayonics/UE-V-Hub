@@ -12,6 +12,6 @@ if(!$?){
     [Environment]::Stop()
 }
 
-Get-ChildItem -Path "$($UevTemplatePath)" -Filter "*.xml" | ForEach-Object {
+Get-ChildItem -Path "$($UevTemplatePath)" -Filter "*.xml" -Recurse | ForEach-Object {
     Register-UevTemplate -Path $($_.FullName) -Verbose
 }

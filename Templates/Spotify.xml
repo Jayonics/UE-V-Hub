@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
   <Name>Spotify</Name>
   <ID>Spotify</ID>
