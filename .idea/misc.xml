@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectResources">
-    <resource url="SettingsLocationTemplate" location="$PROJECT_DIR$" />
-    <resource url="SettingsLocationTemplate2013" location="$PROJECT_DIR$" />
-    <resource url="SettingsLocationTemplate2013A" location="$PROJECT_DIR$" />
+    <resource url="http://schemas.microsoft.com/UserExperienceVirtualization/2012/SettingsLocationTemplate" location="$PROJECT_DIR$/Schemas-Catalogs/SettingsLocationTemplate.xsd" />
+    <resource url="http://schemas.microsoft.com/UserExperienceVirtualization/2013/SettingsLocationTemplate" location="$PROJECT_DIR$/Schemas-Catalogs/SettingsLocationTemplate2013.xsd" />
+    <resource url="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate" location="$PROJECT_DIR$/Schemas-Catalogs/SettingsLocationTemplate2013A.xsd" />
   </component>
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
