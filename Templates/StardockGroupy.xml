@@ -2,7 +2,7 @@
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
     <Name>StardockGroupy</Name>
     <ID>StardockGroupy</ID>
-    <Version>1</Version>
+    <Version>2</Version>
     <Processes>
         <Process>
             <Filename>GroupyConfig.exe</Filename>
