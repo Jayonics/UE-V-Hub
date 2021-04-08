@@ -2,11 +2,10 @@
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
   <Name>WindowsPowerShell-User</Name>
   <ID>WindowsPowerShell-User</ID>
-  <Version>6</Version>
+  <Version>7</Version>
   <Processes>
     <Process>
       <Filename>powershell.exe</Filename>
-      <Architecture>Win64</Architecture>
     </Process>
   </Processes>
   <Settings>
