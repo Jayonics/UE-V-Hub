@@ -8,9 +8,6 @@
       <Filename>powershell.exe</Filename>
       <Architecture>Win64</Architecture>
     </Process>
-    <Process>
-      <Filename>Conhost.exe</Filename>
-    </Process>
   </Processes>
   <Settings>
     <Asynchronous>true</Asynchronous>
