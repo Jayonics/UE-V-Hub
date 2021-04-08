@@ -13,7 +13,10 @@
     <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
     <!-- Syncs the Console Window settings (Font, Color Scheme, Buffer size, e.x.t) -->
     <Registry>
-      <Path Recursive="true" DeleteIfNotFound="false">Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe</Path>
+      <Path Recursive="false">Console</Path>
+    </Registry>
+    <Registry>
+      <Path Recursive="true">Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe</Path>
     </Registry>
     <!-- Syncs the ExecutionPolicy -->
     <Registry>
