@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+    <Name>WindowsPowerShell-User-Modules</Name>
+    <ID>WindowsPowerShell-User-Modules</ID>
+    <Version>3</Version>
+    <Processes>
+        <Process>
+            <Filename>powershell.exe</Filename>
+        </Process>
+    </Processes>
+    <Settings>
+        <!-- Guid is "MyDocuments" KnownFolder. -->
+        <!-- Reference: https://docs.microsoft.com/en-us/windows/win32/shell/knownfolderid -->
+
+        <!-- Syncs Modules for CurrentUser -->
+        <File>
+            <Root>
+                <KnownFolder>{FDD39AD0-238F-46AF-ADB4-6C85480369C7}</KnownFolder>
+            </Root>
+            <Path Recursive="true" DeleteIfNotFound="true">WindowsPowerShell\Modules</Path>
+        </File>
+    </Settings>
+</SettingsLocationTemplate>
