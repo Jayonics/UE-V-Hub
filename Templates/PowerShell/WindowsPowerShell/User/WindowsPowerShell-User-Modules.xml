@@ -19,7 +19,7 @@
             <Root>
                 <KnownFolder>{FDD39AD0-238F-46AF-ADB4-6C85480369C7}</KnownFolder>
             </Root>
-            <Path Recursive="true" DeleteIfNotFound="true">WindowsPowerShell\Modules</Path>
+            <Path Recursive="true" DeleteIfNotFound="false">WindowsPowerShell\Modules</Path>
         </File>
     </Settings>
 </SettingsLocationTemplate>
