@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!DOCTYPE SettingsLocationTemplate [ <!ENTITY GROUPYREGPATH "SOFTWARE\Stardock\Groupy\Groupy.ini"> ]>
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
     <Name>StardockGroupy</Name>
     <ID>StardockGroupy</ID>
@@ -13,9 +12,9 @@
         <Asynchronous>true</Asynchronous>
         <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
         <Registry>
-            <Path Recursive="true" DeleteIfNotFound="false">&GROUPYREGPATH;</Path>
+            <Path Recursive="true" DeleteIfNotFound="false">SOFTWARE\Stardock\Groupy\Groupy.ini</Path>
             <Exclude>
-                <Path Recursive="true">&GROUPYREGPATH;</Path>
+                <Path Recursive="true">SOFTWARE\Stardock\Groupy\Groupy.ini</Path>
                 <Name>(Default)</Name>
             </Exclude>
         </Registry>
