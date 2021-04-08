@@ -2,15 +2,23 @@
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
   <Name>WindowsPowerShell-User</Name>
   <ID>WindowsPowerShell-User</ID>
-  <Version>4</Version>
+  <Version>6</Version>
   <Processes>
     <Process>
       <Filename>powershell.exe</Filename>
+      <Architecture>Win64</Architecture>
+    </Process>
+    <Process>
+      <Filename>Conhost.exe</Filename>
     </Process>
   </Processes>
   <Settings>
     <Asynchronous>true</Asynchronous>
     <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <!-- Syncs the Console Window settings (Font, Color Scheme, Buffer size, e.x.t) -->
+    <Registry>
+      <Path Recursive="true" DeleteIfNotFound="false">Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe</Path>
+    </Registry>
     <!-- Syncs the ExecutionPolicy -->
     <Registry>
       <Path Recursive="true">SOFTWARE\Microsoft\PowerShell</Path>
@@ -34,13 +42,6 @@
       </Root>
       <Path>Microsoft\Windows\Start Menu\Programs\Windows PowerShell</Path>
       <FileMask>Windows PowerShell.lnk</FileMask>
-    </File>
-    <File>
-      <Root>
-        <EnvironmentVariable>APPDATA</EnvironmentVariable>
-      </Root>
-      <Path DeleteIfNotFound="true">Microsoft\Windows\Start Menu\Programs\Windows PowerShell</Path>
-      <FileMask>Windows PowerShell (x86).lnk</FileMask>
     </File>
     <File>
       <Root>
