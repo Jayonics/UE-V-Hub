@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+    <Name>ObsStudio</Name>
+    <ID>ObsStudio</ID>
+    <Version>4</Version>
+    <Processes>
+        <Process>
+            <Filename>obs64.exe</Filename>
+        </Process>
+    </Processes>
+    <Settings>
+        <Asynchronous>true</Asynchronous>
+        <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+        <File>
+            <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
+            <Path Recursive="true">obs-studio\basic\profiles</Path>
+            <FileMask>*.json</FileMask>
+            <FileMask>*.ini</FileMask>
+            <Exclude>
+                <Path Recursive="true">obs-studio\basic\profiles</Path>
+                <FileMask>*.bak</FileMask>
+            </Exclude>
+        </File>
+        <File>
+            <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
+            <Path Recursive="true">obs-studio\basic\scenes</Path>
+            <FileMask>*.json</FileMask>
+            <Exclude>
+                <Path Recursive="true">obs-studio\basic\scenes</Path>
+                <FileMask>*.bak</FileMask>
+            </Exclude>
+        </File>
+    </Settings>
+</SettingsLocationTemplate>

@@ -11,9 +11,9 @@
 	],
 	"settings": {
 		"xml.catalogs": [
-			"file:///A:\\Server\\Scripts\\UE-V-Hub\\Schemas-Catalogs\\Catalog2012.xml",
-			"file:///A:\\Server\\Scripts\\UE-V-Hub\\Schemas-Catalogs\\Catalog2013.xml",
-			"file:///A:\\Server\\Scripts\\UE-V-Hub\\Schemas-Catalogs\\Catalog2013A.xml"
+			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\Catalog2012.xml",
+			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\Catalog2013.xml",
+			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\Catalog2013A.xml"
 		],
 		"xml.fileAssociations": [
 			{
