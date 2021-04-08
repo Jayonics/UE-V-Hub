@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
-<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
-<!DOCTYPE SettingsLocationTemplate [
-    <!ENTITY GROUPYREGPATH "SOFTWARE\Stardock\Groupy\Groupy.ini">
-]>
+<!DOCTYPE SettingsLocationTemplate [ <!ENTITY GROUPYREGPATH "SOFTWARE\Stardock\Groupy\Groupy.ini"> ]>
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
     <Name>StardockGroupy</Name>
     <ID>StardockGroupy</ID>
