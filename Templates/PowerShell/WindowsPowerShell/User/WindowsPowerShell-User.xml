@@ -27,7 +27,7 @@
       </Root>
       <Path Recursive="true">WindowsPowerShell</Path>
       <!-- Current user, All hosts -->
-      <FileMask>Profile.ps1</FileMask>
+      <!-- <FileMask>Profile.ps1</FileMask> -->
       <!-- Current user, Current host -->
       <FileMask>Microsoft.PowerShell_profile.ps1</FileMask>
     </File>
