@@ -25,7 +25,7 @@
       <Root>
         <KnownFolder>{FDD39AD0-238F-46AF-ADB4-6C85480369C7}</KnownFolder>
       </Root>
-      <Path Recursive="true">WindowsPowerShell</Path>
+      <Path Recursive="false">WindowsPowerShell</Path>
       <!-- Current user, All hosts -->
       <!-- <FileMask>Profile.ps1</FileMask> -->
       <!-- Current user, Current host -->
@@ -36,7 +36,7 @@
       <Root>
         <EnvironmentVariable>APPDATA</EnvironmentVariable>
       </Root>
-      <Path>Microsoft\Windows\Start Menu\Programs\Windows PowerShell</Path>
+      <Path Recursive="false">Microsoft\Windows\Start Menu\Programs\Windows PowerShell</Path>
       <FileMask>Windows PowerShell.lnk</FileMask>
     </File>
     <File>
