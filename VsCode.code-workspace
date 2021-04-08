@@ -34,5 +34,9 @@
 		"xml.validation.noGrammar": "error",
 		"xml.validation.resolveExternalEntities": true,
 		"xml.codeLens.enabled": true,
+
+		"tabnine.disable_file_regex": [
+			"[.]xml$",
+		]
 	}
 }

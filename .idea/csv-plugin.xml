@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\Templates\IDE\IntelliJIDEA\IntelliJ-IDEA.xml">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Templates\barrier.xml">
           <value>
             <Attribute>
