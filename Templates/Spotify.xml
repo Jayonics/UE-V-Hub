@@ -3,6 +3,7 @@
   <Name>Spotify</Name>
   <ID>Spotify</ID>
   <Version>5</Version>
+  <Author>Jayonics</Author>
   <Processes>
     <Process>
       <Filename>Spotify.exe</Filename>
