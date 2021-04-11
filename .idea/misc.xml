@@ -4,7 +4,6 @@
     <resource url="http://schemas.microsoft.com/UserExperienceVirtualization/2012/SettingsLocationTemplate" location="$PROJECT_DIR$/Schemas-Catalogs/SettingsLocationTemplate.xsd" />
     <resource url="http://schemas.microsoft.com/UserExperienceVirtualization/2013/SettingsLocationTemplate" location="$PROJECT_DIR$/Schemas-Catalogs/SettingsLocationTemplate2013.xsd" />
     <resource url="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate" location="$PROJECT_DIR$/Schemas-Catalogs/SettingsLocationTemplate2013A.xsd" />
-    <xml-schema-version>XMLSchema_1_1</xml-schema-version>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
