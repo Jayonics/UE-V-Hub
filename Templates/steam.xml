@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-model href="SettingsLocationTemplate2013A.xsd" ?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
   <Name>Steam</Name>
   <ID>Steam</ID>
@@ -8,12 +8,12 @@
     <Process>
       <Filename>steam.exe</Filename>
       <ProductVersion>
-        <Major Minimum="01" Maximum="01" />
-        <Minor Minimum="00" Maximum="00" />
+        <Major Minimum="01" Maximum="01"/>
+        <Minor Minimum="00" Maximum="00"/>
       </ProductVersion>
       <FileVersion>
-        <Major Minimum="6" Maximum="6" />
-        <Minor Minimum="43" Maximum="43" />
+        <Major Minimum="6" Maximum="6"/>
+        <Minor Minimum="43" Maximum="43"/>
       </FileVersion>
     </Process>
   </Processes>

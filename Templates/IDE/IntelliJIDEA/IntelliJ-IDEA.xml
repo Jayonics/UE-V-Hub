@@ -1,218 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="SettingsLocationTemplate2013A.xsd" ?>
+<?xml-model href="SettingsLocationTemplate2013A.xsd"?>
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
-  <Name>IntelliJ IDEA</Name>
-  <ID>IntelliJ-IDEA</ID>
-  <Version>12</Version>
-  <Processes>
-    <Process>
-      <Filename>idea64.exe</Filename>
-      <Architecture>Win64</Architecture>
-    </Process>
-    <Process>
-      <Filename>idea.exe</Filename>
-      <Architecture>Win32</Architecture>
-    </Process>
-  </Processes>
-  <Settings>
-    <Asynchronous>true</Asynchronous>
-    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
-    <!-- Main IDEA Configuration -->
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path>JetBrains\IntelliJIDEA2020.3</Path>
-      <FileMask>*.vmoptions</FileMask>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path>JetBrains\IntelliJIDEA2020.3</Path>
-      <FileMask>idea.key</FileMask>
-    </File>
-    <File><Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\consentOptions</Path>
-    </File>
-    <!-- There are 3 categories: -->
+  <Name>JetbrainsSuite</Name>
+  <ID>JetbrainsSuite</ID>
+  <Author>
+    <Name>Jayonics</Name>
+    <Email>jameshopwood1998+github@gmail.com</Email>
+  </Author>
+  <Common>
+    <Name>Common</Name>
+    <ID>Common</ID>
+    <Version>1</Version>
+    <Settings>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="false" DeleteIfNotFound="false">JetBrains</Path>
+        <FileMask>PermanentDeviceId</FileMask>
+        <FileMask>PermanentUserId</FileMask>
+      </File>
+    </Settings>
+  </Common>
+  <Application>
+    <Name>IntelliJIDEA</Name>
+    <ID>IntelliJIDEA</ID>
+    <Version>13</Version>
+    <Processes>
+      <Process>
+        <Filename>idea64.exe</Filename>
+        <Architecture>Win64</Architecture>
+      </Process>
+      <Process>
+        <Filename>idea.exe</Filename>
+        <Architecture>Win32</Architecture>
+      </Process>
+    </Processes>
+    <Settings>
+      <Asynchronous>true</Asynchronous>
+      <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+      <!-- Main IDEA Configuration -->
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path>JetBrains\IntelliJIDEA2020.3</Path>
+        <FileMask>*.vmoptions</FileMask>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path>JetBrains\IntelliJIDEA2020.3</Path>
+        <FileMask>idea.key</FileMask>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\consentOptions</Path>
+      </File>
+      <!-- There are 3 categories: -->
       <!-- 1. For no built in syncing (the default). -->
       <!-- 2. For using the JBA Settings sync plugin -->
       <!-- 3. For using the SettingsRepository sync plugin -->
-    <!-- Disable each category as appropriate based on your setup -->
-    <!-- NOTE: that DeleteIfNotFound is used on categories 2 and 3 because they are already backed up via their sync methods.
+      <!-- Disable each category as appropriate based on your setup -->
+      <!-- NOTE: that DeleteIfNotFound is used on categories 2 and 3 because they are already backed up via their sync methods.
       If a user uses all 3 of these methods interchangably, their settings repository will triple in size unnecesairily.
       Therefore it makes sense to only ensure the backup of settings the user is not syncing within the IDE. -->
 
-    <!-- 1. Main settings directories (No JBA Settings Sync or Repository Sync)-->
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path>JetBrains\IntelliJIDEA2020.3</Path>
-      <FileMask>*.txt</FileMask>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\codestyles</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\colors</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\fileTemplates</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\filetypes</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\inspection</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\keymaps</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\options</Path>
-      <Exclude>
-        <Path>JetBrains\IntelliJIDEA2020.3\options</Path>
-        <FileMask>recentProjects.xml</FileMask>
-      </Exclude>
-      <Exclude>
-        <Path>JetBrains\IntelliJIDEA2020.3\options</Path>
-        <FileMask>window.state.xml</FileMask>
-      </Exclude>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\scratches</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\templates</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\tools</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\shelf</Path>
-    </File>
-    <!-- 2. Jetbrains account settings sync options -->
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\jba_config</Path>
-      <FileMask>*.txt</FileMask>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\codestyles</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\colors</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\fileTemplates</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\filetypes</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\inspection</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\keymaps</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\options</Path>
-      <Exclude>
-        <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\jba_config\options</Path>
-        <FileMask>recentProjects.xml</FileMask>
-      </Exclude>
-      <Exclude>
-        <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\jba_config\options</Path>
-        <FileMask>window.state.xml</FileMask>
-      </Exclude>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\scratches</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\templates</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\tools</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\shelf</Path>
-    </File>
-    <!-- 3. SettingsRepository Sync mode -->
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\settingsRepository</Path>
-      <FileMask>*.txt</FileMask>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\codestyles</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\colors</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\fileTemplates</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\filetypes</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\inspection</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\keymaps</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\options</Path>
-      <Exclude>
-        <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\options</Path>
-        <FileMask>recentProjects.xml</FileMask>
-      </Exclude>
-      <Exclude>
-        <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\options</Path>
-        <FileMask>window.state.xml</FileMask>
-      </Exclude>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\scratches</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\templates</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\tools</Path>
-    </File>
-    <File>
-      <Root><EnvironmentVariable>APPDATA</EnvironmentVariable></Root>
-      <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\shelf</Path>
-    </File>
+      <!-- 1. Main settings directories (No JBA Settings Sync or Repository Sync)-->
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path>JetBrains\IntelliJIDEA2020.3</Path>
+        <FileMask>*.txt</FileMask>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\codestyles</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\colors</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\fileTemplates</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\filetypes</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\inspection</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\keymaps</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\options</Path>
+        <Exclude>
+          <Path>JetBrains\IntelliJIDEA2020.3\options</Path>
+          <FileMask>recentProjects.xml</FileMask>
+        </Exclude>
+        <Exclude>
+          <Path>JetBrains\IntelliJIDEA2020.3\options</Path>
+          <FileMask>window.state.xml</FileMask>
+        </Exclude>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\scratches</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\templates</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\tools</Path>
+      </File>
+      <File>
+        <Root>
+          <EnvironmentVariable>APPDATA</EnvironmentVariable>
+        </Root>
+        <Path Recursive="true">JetBrains\IntelliJIDEA2020.3\shelf</Path>
+      </File>
+    </Settings>
+  </Application>
+  <!-- <!-- 2. Jetbrains account settings sync options -->
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\jba_config</Path>
+    <FileMask>*.txt</FileMask>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\codestyles</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\colors</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\fileTemplates</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\filetypes</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\inspection</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\keymaps</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\options</Path>
+    <Exclude>
+      <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\jba_config\options</Path>
+      <FileMask>recentProjects.xml</FileMask>
+    </Exclude>
+    <Exclude>
+      <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\jba_config\options</Path>
+      <FileMask>window.state.xml</FileMask>
+    </Exclude>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\scratches</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\templates</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\tools</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\jba_config\shelf</Path>
+  </File>
+  <!-- 3. SettingsRepository Sync mode -->
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\settingsRepository</Path>
+    <FileMask>*.txt</FileMask>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\codestyles</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\colors</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\fileTemplates</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\filetypes</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\inspection</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\keymaps</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\options</Path>
+    <Exclude>
+      <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\options</Path>
+      <FileMask>recentProjects.xml</FileMask>
+    </Exclude>
+    <Exclude>
+      <Path DeleteIfNotFound="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\options</Path>
+      <FileMask>window.state.xml</FileMask>
+    </Exclude>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\scratches</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\templates</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\tools</Path>
+  </File>
+  <File>
+    <Root>
+      <EnvironmentVariable>APPDATA</EnvironmentVariable>
+    </Root>
+    <Path DeleteIfNotFound="true" Recursive="true">JetBrains\IntelliJIDEA2020.3\settingsRepository\shelf</Path>
+  </File>
   </Settings>
-</SettingsLocationTemplate>
+</SettingsLocationTemplate> -->

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+    <Name>Git</Name>
+    <ID>Git</ID>
+    <Author>
+        <Name>Jayonics</Name>
+        <Email>jameshopwood1998+github@gmail.com</Email>
+    </Author>
+    <Common>
+        <Name>Common</Name>
+        <ID>Common</ID>
+        <Version>1</Version>
+        <Settings>
+            <!-- Git System Settings (Optional) -->
+            <File>
+                <Root>
+                    <EnvironmentVariable>PROGRAMFILES</EnvironmentVariable>
+                </Root>
+                <Path>Git\etc</Path>
+                <!-- Git SystemWide Config-->
+                <FileMask>gitconfig</FileMask>
+            </File>
+            <!-- Git User Settings -->
+            <File>
+                <Root>
+                    <EnvironmentVariable>USERPROFILE</EnvironmentVariable>
+                </Root>
+                <!-- Git Global (Userprofile) Config -->
+                <FileMask>.gitconfig</FileMask>
+            </File>
+        </Settings>
+    </Common>
+    <!-- Main Git  -->
+    <Application>
+        <Name>Git</Name>
+        <ID>Git</ID>
+        <Version>1</Version>
+        <Processes>
+            <Process>
+                <Filename>git.exe</Filename>
+            </Process>
+        </Processes>
+        <Settings>
+            <Asynchronous>true</Asynchronous>
+            <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+            <!-- Git System settings -->
+            <File>
+                <Root>
+                    <EnvironmentVariable>PROGRAMFILES</EnvironmentVariable>
+                </Root>
+                <Path>Git\etc</Path>
+                <FileMask>docx2txt.config</FileMask>
+                <!-- Git Install Options -->
+                <FileMask>install-options.txt</FileMask>
+            </File>
+        </Settings>
+    </Application>
+    <!-- Git Bash -->
+    <Application>
+        <Name>GitBash</Name>
+        <ID>GitBash</ID>
+        <Version>1</Version>
+        <Processes>
+            <Process>
+                <Filename>bash.exe</Filename>
+            </Process>
+        </Processes>
+        <Settings>
+            <Asynchronous>true</Asynchronous>
+            <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+            <File>
+                <Root>
+                    <EnvironmentVariable>PROGRAMFILES</EnvironmentVariable>
+                </Root>
+                <Path Recursive="false" DeleteIfNotFound="false">Git\etc</Path>
+                <!-- Bash Config -->
+                <FileMask>git-bash.config</FileMask>
+                <FileMask>bash.bashrc</FileMask>
+                <!-- Text editors (Vim and Nano) Config -->
+                <FileMask>vimrc</FileMask>
+                <FileMask>nanorc</FileMask>
+            </File>
+        </Settings>
+    </Application>
+    <!-- Git OpenSSH -->
+    <Application>
+        <Name>GitSSH</Name>
+        <ID>GitSSH</ID>
+        <Version>1</Version>
+        <Processes>
+            <Process>
+                <Filename>ssh.exe</Filename>
+            </Process>
+            <Process>
+                <Filename>sshd.exe</Filename>
+            </Process>
+        </Processes>
+        <Settings>
+            <Asynchronous>true</Asynchronous>
+            <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+            <!-- System wide Git OpenSSH config -->
+            <File>
+                <Root>
+                    <EnvironmentVariable>PROGRAMFILES</EnvironmentVariable>
+                </Root>
+                <Path Recursive="false" DeleteIfNotFound="false">Git\etc\ssh</Path>
+                <!-- Git OpenSSH Client Config -->
+                <FileMask>ssh_config</FileMask>
+                <!-- Git OpenSSH Server Config -->
+                <FileMask>sshd_config</FileMask>
+            </File>
+        </Settings>
+    </Application>
+</SettingsLocationTemplate>
