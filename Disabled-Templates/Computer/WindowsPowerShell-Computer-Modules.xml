@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+    <Name>WindowsPowerShell-Computer-Modules</Name>
+    <ID>WindowsPowerShell-Computer-Modules</ID>
+    <Version>5</Version>
+    <Processes>
+        <Process>
+            <Filename>powershell.exe</Filename>
+        </Process>
+    </Processes>
+    <Settings>
+        <Asynchronous>true</Asynchronous>
+        <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+        <!-- Syncs Modules for AllUsers (Azure Modules ignored) -->
+        <File>
+            <Root>
+                <EnvironmentVariable>PROGRAMFILES</EnvironmentVariable>
+            </Root>
+            <Path Recursive="true" DeleteIfNotFound="false">WindowsPowerShell\Modules</Path>
+            <Exclude>
+                <Path Recursive="true" DeleteIfNotFound="true">WindowsPowerShell\Modules</Path>
+                <FileMask>Azure*</FileMask>
+            </Exclude>
+        </File>
+    </Settings>
+</SettingsLocationTemplate>

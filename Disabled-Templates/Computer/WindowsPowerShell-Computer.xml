@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>WindowsPowerShell-Computer</Name>
+  <ID>WindowsPowerShell-Computer</ID>
+  <Version>4</Version>
+  <Processes>
+    <Process>
+      <Filename>powershell.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+    <Asynchronous>true</Asynchronous>
+    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <!-- Syncs the ExecutionPolicy -->
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\PowerShell</Path>
+      <Name>ExecutionPolicy</Name>
+    </Registry>
+    <!-- Syncs Computer PowerShell $Profiles -->
+    <File>
+      <Root>
+        <EnvironmentVariable>SYSTEMROOT</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">System32\WindowsPowerShell\v1.0</Path>
+      <!-- Current user, All hosts -->
+      <FileMask>Profile.ps1</FileMask>
+      <!-- Current user, Current host -->
+      <FileMask>Microsoft.PowerShell_profile.ps1</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>

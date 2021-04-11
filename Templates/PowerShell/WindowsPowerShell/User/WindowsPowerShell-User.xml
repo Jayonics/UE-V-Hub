@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>WindowsPowerShell-User</Name>
+  <ID>WindowsPowerShell-User</ID>
+  <Version>7</Version>
+  <Processes>
+    <Process>
+      <Filename>powershell.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+    <Asynchronous>true</Asynchronous>
+    <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+    <!-- Syncs the Console Window settings (Font, Color Scheme, Buffer size, e.x.t) -->
+    <!-- <Registry>
+      <Path Recursive="false">Console</Path>
+    </Registry>
+    <Registry>
+      <Path Recursive="true">Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe</Path>
+    </Registry> -->
+    <!-- Syncs the ExecutionPolicy -->
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\PowerShell</Path>
+      <Name>ExecutionPolicy</Name>
+    </Registry>
+    <!-- Syncs User PowerShell $Profiles -->
+    <File>
+      <Root>
+        <KnownFolder>{FDD39AD0-238F-46AF-ADB4-6C85480369C7}</KnownFolder>
+      </Root>
+      <Path Recursive="false">WindowsPowerShell</Path>
+      <!-- Current user, All hosts -->
+      <!-- <FileMask>Profile.ps1</FileMask> -->
+      <!-- Current user, Current host -->
+      <FileMask>Microsoft.PowerShell_profile.ps1</FileMask>
+    </File>
+    <!-- Syncs PowerShell Start Menu shortcuts -->
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="false">Microsoft\Windows\Start Menu\Programs\Windows PowerShell</Path>
+      <FileMask>Windows PowerShell.lnk</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path DeleteIfNotFound="true">Microsoft\Windows\PowerShell\PSReadLine</Path>
+      <FileMask>ConsoleHost_history.txt</FileMask>
+    </File>
+    <File>
+      <Root>
+        <EnvironmentVariable>LOCALAPPDATA</EnvironmentVariable>
+      </Root>
+      <Path DeleteIfNotFound="true">Microsoft\Windows\PowerShell\PowerShellGet</Path>
+      <FileMask>PSRepositories.xml</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>
