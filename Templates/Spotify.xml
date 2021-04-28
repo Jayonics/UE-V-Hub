@@ -3,7 +3,10 @@
   <Name>Spotify</Name>
   <ID>Spotify</ID>
   <Version>5</Version>
-  <Author>Jayonics</Author>
+  <Author>
+    <Name>Jayonics</Name>
+    <Email>jameshopwood1998+github@gmail.com</Email>
+  </Author>
   <Processes>
     <Process>
       <Filename>Spotify.exe</Filename>

@@ -2,7 +2,7 @@
 <SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
     <Name>OpenSSH</Name>
     <ID>OpenSSH</ID>
-    <Version>1</Version>
+    <Version>2</Version>
     <Author>
         <Name>Jayonics</Name>
         <Email>jameshopwood1998+github@gmail.com</Email>
@@ -55,6 +55,14 @@
                 <FileMask>authorized_keys*.*</FileMask>
             </Exclude>
         </File>
+        <!-- User defined config -->
+        <File>
+            <Root>
+                <EnvironmentVariable>USERPROFILE</EnvironmentVariable>
+            </Root>
+            <Path DeleteIfNotFound="false" Recursive="false">.ssh</Path>
+            <FileMask>config*</FileMask>
+        </File>
 
         <!-- Computer SSH Configuration (Optional) -->
         <!-- SSH Configuration-->
@@ -66,14 +74,16 @@
             <FileMask>sshd_config</FileMask>
         </File>
         <!-- Public Host keys -->
-        <File>
+        <!-- <File>
             <Root>
                 <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
             </Root>
             <Path DeleteIfNotFound="true" Recursive="false">ssh</Path>
             <FileMask>ssh_host*.pub</FileMask>
         </File>
+        -->
         <!-- Private Host keys -->
+        <!--
         <File>
             <Root>
                 <EnvironmentVariable>PROGRAMDATA</EnvironmentVariable>
@@ -84,7 +94,8 @@
                 <Path>ssh</Path>
                 <FileMask>ssh_host*.pub</FileMask>
             </Exclude>
-        </File>
+        </File> 
+        -->
     </Settings>
 
 </SettingsLocationTemplate>
