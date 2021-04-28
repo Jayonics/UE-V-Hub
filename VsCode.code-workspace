@@ -12,7 +12,8 @@
 	"settings": {
 		"xml.catalogs": [
 			// Put your repo absolute path here + Schemas-Catalogs...
-			"file://JH-WIN-SVR2/uev/Schemas-Catalogs/CatalogUEV.xml"
+			"file:///A:\\Server\\Scripts\\UE-V-HUB\\Schemas-Catalogs\\CatalogUEV.xml",
+			"file:///\\\\JH-WIN-SVR2\\uev\\Schemas-Catalogs\\CatalogUEV.xml"
 		],
 		"xml.fileAssociations": [
 			{
