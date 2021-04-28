@@ -11,9 +11,8 @@
 	],
 	"settings": {
 		"xml.catalogs": [
-			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\Catalog2012.xml",
-			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\Catalog2013.xml",
-			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\Catalog2013A.xml"
+			// Put your repo absolute path here + Schemas-Catalogs...
+			"file:///\\\\JH-WIN-SVR2\\UEV\\Schemas-Catalogs\\CatalogUEV.xml",
 		],
 		"xml.fileAssociations": [
 			{
