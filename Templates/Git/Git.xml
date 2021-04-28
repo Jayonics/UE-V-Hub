@@ -41,8 +41,8 @@
             </Process>
         </Processes>
         <Settings>
-            <Asynchronous>true</Asynchronous>
-            <PreventOverlappingSynchronization>false</PreventOverlappingSynchronization>
+            <Asynchronous>false</Asynchronous>
+            <PreventOverlappingSynchronization>true</PreventOverlappingSynchronization>
             <!-- Git System settings -->
             <File>
                 <Root>
